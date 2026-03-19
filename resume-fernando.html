@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernando Paredes Rios - Full Stack Developer | Wingz Candidate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #131A1B;
+            --teal: #0D9488;
+            --green-bright: #00F9B8;
+            --green-mid: #00B692;
+            --white: #FFFFFF;
+            --gray-50: #F8FAFB;
+            --gray-100: #F1F5F4;
+            --gray-200: #E2E8E7;
+            --gray-400: #94A3A0;
+            --gray-600: #4B5E5A;
+            --gray-700: #374845;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--gray-50);
+            color: var(--navy);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .back-link {
+            display: block;
+            background: var(--navy);
+            padding: 12px 40px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .back-link a {
+            color: var(--green-bright);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .back-link a:hover {
+            color: var(--white);
+        }
+
+        .back-link a::before {
+            content: "\2190\00a0\00a0";
+        }
+
+        header {
+            background: var(--navy);
+            padding: 48px 40px 52px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--teal), var(--green-bright), var(--green-mid));
+        }
+
+        .header-brand {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+
+        .header-brand span {
+            color: var(--green-bright);
+        }
+
+        .header-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .candidate-banner {
+            background: linear-gradient(135deg, var(--teal), var(--green-mid));
+            padding: 36px 40px;
+            color: var(--white);
+        }
+
+        .candidate-name {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            margin-bottom: 6px;
+        }
+
+        .candidate-title {
+            font-size: 16px;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 12px;
+        }
+
+        .candidate-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 13px;
+            opacity: 0.85;
+        }
+
+        .candidate-contact a {
+            color: var(--white);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            transition: border-color 0.2s;
+        }
+
+        .candidate-contact a:hover {
+            border-color: var(--white);
+        }
+
+        .resume-body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+        }
+
+        .section {
+            margin-bottom: 36px;
+        }
+
+        .section-title {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--teal);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gray-200);
+            margin-bottom: 18px;
+        }
+
+        .summary-text {
+            font-size: 15px;
+            color: var(--gray-700);
+            line-height: 1.75;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 10px 20px;
+            font-size: 14px;
+        }
+
+        .skill-label {
+            font-weight: 600;
+            color: var(--navy);
+            padding: 4px 0;
+        }
+
+        .skill-value {
+            color: var(--gray-600);
+            padding: 4px 0;
+            line-height: 1.6;
+        }
+
+        .experience-item {
+            margin-bottom: 24px;
+            padding-left: 20px;
+            border-left: 3px solid var(--green-mid);
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .exp-header {
+            margin-bottom: 8px;
+        }
+
+        .exp-role {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .exp-company {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--teal);
+        }
+
+        .exp-meta {
+            font-size: 13px;
+            color: var(--gray-400);
+            margin-top: 2px;
+        }
+
+        .exp-desc {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.65;
+        }
+
+        .education-item, .cert-item, .lang-item, .oss-item {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .edu-degree, .cert-name {
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .edu-school {
+            color: var(--teal);
+            font-weight: 500;
+        }
+
+        .edu-year {
+            font-size: 13px;
+            color: var(--gray-400);
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--gray-100);
+            color: var(--gray-700);
+            font-size: 13px;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin: 2px 4px 2px 0;
+        }
+
+        footer {
+            background: var(--navy);
+            padding: 32px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--teal), var(--green-bright), var(--green-mid));
+        }
+
+        .footer-text {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            color: var(--gray-400);
+        }
+
+        .footer-text strong {
+            color: var(--white);
+        }
+
+        .footer-text .accent {
+            color: var(--green-bright);
+        }
+
+        .footer-sub {
+            font-size: 12px;
+            color: var(--gray-600);
+            margin-top: 8px;
+        }
+
+        @media (max-width: 640px) {
+            header, .candidate-banner, .resume-body, .back-link, footer {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .skill-label {
+                margin-top: 6px;
+                padding-bottom: 0;
+            }
+            .skill-value {
+                padding-top: 0;
+            }
+            .candidate-contact {
+                flex-direction: column;
+                gap: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="back-link">
+        <a href="index.html">Back to All Candidates</a>
+    </div>
+
+    <header>
+        <div class="header-brand">Wingz<span>.</span></div>
+        <div class="header-subtitle">Candidate Resume</div>
+    </header>
+
+    <div class="candidate-banner">
+        <div class="candidate-name">Fernando Paredes Rios</div>
+        <div class="candidate-title">Full Stack Developer | Peru</div>
+        <div class="candidate-contact">
+            <span><a href="mailto:fprios112@gmail.com">fprios112@gmail.com</a></span>
+            <span><a href="https://ferparedesrios.dev" target="_blank">ferparedesrios.dev</a></span>
+        </div>
+    </div>
+
+    <div class="resume-body">
+
+        <div class="section">
+            <div class="section-title">Summary</div>
+            <p class="summary-text">
+                Software developer with 8 years of experience working with IT teams and utilizing agile methodologies. Full-stack developer with extensive experience in frontend development using React, and hybrid mobile app development with React Native (CLI and Expo) and Flutter. Backend experience with Python/Django and Node.js.
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-label">Mobile</div>
+                <div class="skill-value">React Native (CLI + Expo), Flutter, Swift, Kotlin native modules</div>
+
+                <div class="skill-label">Frontend</div>
+                <div class="skill-value">React, Next.js, TypeScript, JavaScript, HTML, CSS, Angular</div>
+
+                <div class="skill-label">Backend</div>
+                <div class="skill-value">Python, Django, Node.js</div>
+
+                <div class="skill-label">State Mgmt</div>
+                <div class="skill-value">Zustand, XState, Redux, MobX</div>
+
+                <div class="skill-label">Tools</div>
+                <div class="skill-value">Docker, Git, GitHub Actions, Firebase, Google Cloud, Braze, Jira</div>
+
+                <div class="skill-label">Testing</div>
+                <div class="skill-value">Jest, React Testing Library, Cypress</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Certifications</div>
+            <div class="cert-item"><span class="cert-name">Javascript Fullstack Developer</span> &mdash; Platzi</div>
+            <div class="cert-item"><span class="cert-name">Backend Development with Go</span> &mdash; Platzi</div>
+            <div class="cert-item"><span class="cert-name">React Native App Development</span> &mdash; Platzi</div>
+            <div class="cert-item"><span class="cert-name">Linux Unhatched</span> &mdash; Cisco</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Work Experience</div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Senior Mobile Engineer</div>
+                    <div class="exp-company">Series Entertainment</div>
+                    <div class="exp-meta">Jul 2025 - Jan 2026</div>
+                </div>
+                <div class="exp-desc">
+                    AI-powered platform with React/React Native. Integrated LLMs and OpenAI. Firebase + OAuth integration.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Senior Mobile Engineer</div>
+                    <div class="exp-company">Urbano Express</div>
+                    <div class="exp-meta">Mar 2025 - Jul 2025</div>
+                </div>
+                <div class="exp-desc">
+                    Built and maintained mobile apps. Migrated old Java codebase. Python/Django backend.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Senior Frontend Developer</div>
+                    <div class="exp-company">Plan A Technologies</div>
+                    <div class="exp-meta">Nov 2024 - Feb 2025</div>
+                </div>
+                <div class="exp-desc">
+                    Built web app from scratch for US/Mexican markets using React/Next.js.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Senior Mobile Developer</div>
+                    <div class="exp-company">Cheil / Samsung</div>
+                    <div class="exp-meta">May 2024 - Nov 2024</div>
+                </div>
+                <div class="exp-desc">
+                    Built Force 360 mobile app from scratch for device sales points in Peru.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Software Engineer</div>
+                    <div class="exp-company">Globant</div>
+                    <div class="exp-meta">Apr 2021 - Mar 2024</div>
+                </div>
+                <div class="exp-desc">
+                    Three enterprise clients: Backcountry (US), FrontDoor (US), Banco de Chile. React Native mobile development with SOC security standards.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Frontend Developer</div>
+                    <div class="exp-company">Aqui hay Dominios</div>
+                    <div class="exp-meta">Nov 2020 - Apr 2021</div>
+                </div>
+                <div class="exp-desc">
+                    Developed web products and CMS administration.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Programmer Analyst</div>
+                    <div class="exp-company">Telefonica Educacion Digital</div>
+                    <div class="exp-meta">Apr 2019 - Dec 2020</div>
+                </div>
+                <div class="exp-desc">
+                    Developed websites and applications including Villaplanet game admin and Educared mobile app.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Frontend Developer</div>
+                    <div class="exp-company">SONR Digital</div>
+                    <div class="exp-meta">Sep 2018 - Mar 2019</div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Frontend Developer Jr.</div>
+                    <div class="exp-company">SrBurns</div>
+                    <div class="exp-meta">May 2017 - Aug 2018</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="education-item">
+                <div class="edu-degree">Bachelor in Economics</div>
+                <div class="edu-school">Universidad Nacional Federico Villarreal</div>
+                <div class="edu-year">2007 - 2012</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Languages</div>
+            <div class="lang-item"><strong>English:</strong> B2</div>
+            <div class="lang-item"><strong>Spanish:</strong> Native</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Open Source</div>
+            <div class="oss-item">
+                <strong>Ern-CLI</strong> &mdash; React Native project scaffolding tool<br>
+                <a href="https://npmjs.com/package/ern-cli" target="_blank" style="color: var(--teal); font-size: 13px;">npmjs.com/package/ern-cli</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-text">
+            Presented by <strong>Sagan</strong> for <strong class="accent">Wingz</strong>
+        </div>
+        <div class="footer-sub">getsagan.com &mdash; Redefining Recruitment</div>
+    </footer>
+
+</body>
+</html>

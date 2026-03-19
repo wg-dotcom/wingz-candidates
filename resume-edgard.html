@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edgard Ferreira Rodrigues - Full-Stack Engineer | Wingz Candidate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #131A1B;
+            --teal: #0D9488;
+            --green-bright: #00F9B8;
+            --green-mid: #00B692;
+            --white: #FFFFFF;
+            --gray-50: #F8FAFB;
+            --gray-100: #F1F5F4;
+            --gray-200: #E2E8E7;
+            --gray-400: #94A3A0;
+            --gray-600: #4B5E5A;
+            --gray-700: #374845;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--gray-50);
+            color: var(--navy);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .back-link {
+            display: block;
+            background: var(--navy);
+            padding: 12px 40px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .back-link a {
+            color: var(--green-bright);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .back-link a:hover {
+            color: var(--white);
+        }
+
+        .back-link a::before {
+            content: "\2190\00a0\00a0";
+        }
+
+        header {
+            background: var(--navy);
+            padding: 48px 40px 52px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--teal), var(--green-bright), var(--green-mid));
+        }
+
+        .header-brand {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+
+        .header-brand span {
+            color: var(--green-bright);
+        }
+
+        .header-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .candidate-banner {
+            background: linear-gradient(135deg, var(--teal), var(--green-mid));
+            padding: 36px 40px;
+            color: var(--white);
+        }
+
+        .candidate-name {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            margin-bottom: 6px;
+        }
+
+        .candidate-title {
+            font-size: 16px;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 12px;
+        }
+
+        .candidate-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 13px;
+            opacity: 0.85;
+        }
+
+        .candidate-contact a {
+            color: var(--white);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            transition: border-color 0.2s;
+        }
+
+        .candidate-contact a:hover {
+            border-color: var(--white);
+        }
+
+        .resume-body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+        }
+
+        .section {
+            margin-bottom: 36px;
+        }
+
+        .section-title {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--teal);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gray-200);
+            margin-bottom: 18px;
+        }
+
+        .summary-text {
+            font-size: 15px;
+            color: var(--gray-700);
+            line-height: 1.75;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 170px 1fr;
+            gap: 10px 20px;
+            font-size: 14px;
+        }
+
+        .skill-label {
+            font-weight: 600;
+            color: var(--navy);
+            padding: 4px 0;
+        }
+
+        .skill-value {
+            color: var(--gray-600);
+            padding: 4px 0;
+            line-height: 1.6;
+        }
+
+        .experience-item {
+            margin-bottom: 24px;
+            padding-left: 20px;
+            border-left: 3px solid var(--green-mid);
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .exp-header {
+            margin-bottom: 8px;
+        }
+
+        .exp-role {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .exp-company {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--teal);
+        }
+
+        .exp-meta {
+            font-size: 13px;
+            color: var(--gray-400);
+            margin-top: 2px;
+        }
+
+        .exp-desc {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.65;
+        }
+
+        .education-item, .cert-item, .lang-item, .oss-item {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .edu-degree, .cert-name {
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .edu-school {
+            color: var(--teal);
+            font-weight: 500;
+        }
+
+        .edu-year {
+            font-size: 13px;
+            color: var(--gray-400);
+        }
+
+        footer {
+            background: var(--navy);
+            padding: 32px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--teal), var(--green-bright), var(--green-mid));
+        }
+
+        .footer-text {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            color: var(--gray-400);
+        }
+
+        .footer-text strong {
+            color: var(--white);
+        }
+
+        .footer-text .accent {
+            color: var(--green-bright);
+        }
+
+        .footer-sub {
+            font-size: 12px;
+            color: var(--gray-600);
+            margin-top: 8px;
+        }
+
+        @media (max-width: 640px) {
+            header, .candidate-banner, .resume-body, .back-link, footer {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .skill-label {
+                margin-top: 6px;
+                padding-bottom: 0;
+            }
+            .skill-value {
+                padding-top: 0;
+            }
+            .candidate-contact {
+                flex-direction: column;
+                gap: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="back-link">
+        <a href="index.html">Back to All Candidates</a>
+    </div>
+
+    <header>
+        <div class="header-brand">Wingz<span>.</span></div>
+        <div class="header-subtitle">Candidate Resume</div>
+    </header>
+
+    <div class="candidate-banner">
+        <div class="candidate-name">Edgard Ferreira Rodrigues</div>
+        <div class="candidate-title">Full-Stack Engineer | Ceara, Brazil</div>
+        <div class="candidate-contact">
+            <span><a href="mailto:edgard.ferreira.dev@gmail.com">edgard.ferreira.dev@gmail.com</a></span>
+            <span><a href="https://linkedin.com/in/edgard-ferreira-rodrigues" target="_blank">linkedin.com/in/edgard-ferreira-rodrigues</a></span>
+            <span><a href="https://github.com/edgardtech" target="_blank">github.com/edgardtech</a></span>
+        </div>
+    </div>
+
+    <div class="resume-body">
+
+        <div class="section">
+            <div class="section-title">Summary</div>
+            <p class="summary-text">
+                Full-stack software engineer with 6+ years of experience building and maintaining production-grade backend APIs and cross-platform mobile applications. Deep expertise in Python, Django, and Django REST Framework (DRF), including RESTful API design, serializer optimization, ORM query tuning, and database migrations. Hands-on React Native development for iOS and Android. Strong background in PostgreSQL, TDD, CI/CD, and AWS.
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-label">Backend</div>
+                <div class="skill-value">Python, Django, Django REST Framework (DRF), Node.js, PHP/Laravel, .NET</div>
+
+                <div class="skill-label">Mobile</div>
+                <div class="skill-value">React Native (iOS &amp; Android), React Navigation, Push Notifications, React Query</div>
+
+                <div class="skill-label">Frontend</div>
+                <div class="skill-value">React, JavaScript (ES6+), HTML5, CSS3, Vue.js</div>
+
+                <div class="skill-label">Databases</div>
+                <div class="skill-value">PostgreSQL, MySQL, DynamoDB, DB2, Schema Design, Query Optimization, Zero-Downtime Migrations</div>
+
+                <div class="skill-label">Cloud &amp; DevOps</div>
+                <div class="skill-value">AWS (Lambda, ECS, EKS, SQS, RDS, S3, API Gateway, CloudWatch), Docker, Terraform, GitHub Actions, CI/CD</div>
+
+                <div class="skill-label">Testing</div>
+                <div class="skill-value">pytest, pytest-django, TDD, Cypress, Selenium, Playwright, JMeter, REST Assured</div>
+
+                <div class="skill-label">Observability</div>
+                <div class="skill-value">Sentry, Datadog, ELK Stack, Prometheus, Grafana, CloudWatch Logs</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Work Experience</div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Full-Stack Engineer</div>
+                    <div class="exp-company">IMP Sistemas</div>
+                    <div class="exp-meta">Remote | 2022 - Present</div>
+                </div>
+                <div class="exp-desc">
+                    Designed RESTful APIs with Django/DRF serving thousands of daily transactions. Built React Native features (booking flows, push notifications). Optimized PostgreSQL achieving 40% reduction in API response times. Led CI/CD pipeline adoption. 80%+ test coverage with pytest-django.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Backend &amp; Automation Engineer</div>
+                    <div class="exp-company">Inova Digital</div>
+                    <div class="exp-meta">Remote | 2020 - 2022</div>
+                </div>
+                <div class="exp-desc">
+                    Developed Python/Node.js adaptation layers reducing processing time by 60%. Designed RESTful APIs for React Native and web front-ends. Built test automation suites with Cypress and Playwright.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">QA &amp; Integration Engineer</div>
+                    <div class="exp-company">StartUp Hub</div>
+                    <div class="exp-meta">Remote | 2019 - 2020</div>
+                </div>
+                <div class="exp-desc">
+                    Designed automated test strategies with Selenium and JMeter.
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="education-item">
+                <div class="edu-degree">B.Tech Analysis and Development of Systems</div>
+                <div class="edu-school">Estacio de Sa</div>
+                <div class="edu-year">Expected 2026</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Certifications</div>
+            <div class="cert-item"><span class="cert-name">AWS Certified Developer Associate</span> &mdash; In Progress</div>
+            <div class="cert-item"><span class="cert-name">Docker Certified Associate</span> &mdash; In Progress</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Languages</div>
+            <div class="lang-item"><strong>Portuguese:</strong> Native</div>
+            <div class="lang-item"><strong>English:</strong> Intermediate (B2)</div>
+            <div class="lang-item"><strong>Spanish:</strong> Intermediate</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Open Source</div>
+            <div class="oss-item">
+                <strong>Batch Processing &amp; Data Migration Toolkit</strong><br>
+                <a href="https://github.com/edgardtech" target="_blank" style="color: var(--teal); font-size: 13px;">github.com/edgardtech</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-text">
+            Presented by <strong>Sagan</strong> for <strong class="accent">Wingz</strong>
+        </div>
+        <div class="footer-sub">getsagan.com &mdash; Redefining Recruitment</div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gildardo Guerra - Full-Stack Engineer | Wingz Candidate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #131A1B;
+            --teal: #0D9488;
+            --green-bright: #00F9B8;
+            --green-mid: #00B692;
+            --white: #FFFFFF;
+            --gray-50: #F8FAFB;
+            --gray-100: #F1F5F4;
+            --gray-200: #E2E8E7;
+            --gray-400: #94A3A0;
+            --gray-600: #4B5E5A;
+            --gray-700: #374845;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--gray-50);
+            color: var(--navy);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .back-link {
+            display: block;
+            background: var(--navy);
+            padding: 12px 40px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .back-link a {
+            color: var(--green-bright);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .back-link a:hover {
+            color: var(--white);
+        }
+
+        .back-link a::before {
+            content: "\2190\00a0\00a0";
+        }
+
+        header {
+            background: var(--navy);
+            padding: 48px 40px 52px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--teal), var(--green-bright), var(--green-mid));
+        }
+
+        .header-brand {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+
+        .header-brand span {
+            color: var(--green-bright);
+        }
+
+        .header-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .candidate-banner {
+            background: linear-gradient(135deg, var(--teal), var(--green-mid));
+            padding: 36px 40px;
+            color: var(--white);
+        }
+
+        .candidate-name {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            margin-bottom: 6px;
+        }
+
+        .candidate-title {
+            font-size: 16px;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 12px;
+        }
+
+        .candidate-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 13px;
+            opacity: 0.85;
+        }
+
+        .candidate-contact a {
+            color: var(--white);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            transition: border-color 0.2s;
+        }
+
+        .candidate-contact a:hover {
+            border-color: var(--white);
+        }
+
+        .resume-body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+        }
+
+        .section {
+            margin-bottom: 36px;
+        }
+
+        .section-title {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--teal);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gray-200);
+            margin-bottom: 18px;
+        }
+
+        .summary-text {
+            font-size: 15px;
+            color: var(--gray-700);
+            line-height: 1.75;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 10px 20px;
+            font-size: 14px;
+        }
+
+        .skill-label {
+            font-weight: 600;
+            color: var(--navy);
+            padding: 4px 0;
+        }
+
+        .skill-value {
+            color: var(--gray-600);
+            padding: 4px 0;
+            line-height: 1.6;
+        }
+
+        .experience-item {
+            margin-bottom: 24px;
+            padding-left: 20px;
+            border-left: 3px solid var(--green-mid);
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .exp-header {
+            margin-bottom: 8px;
+        }
+
+        .exp-role {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .exp-company {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--teal);
+        }
+
+        .exp-meta {
+            font-size: 13px;
+            color: var(--gray-400);
+            margin-top: 2px;
+        }
+
+        .exp-desc {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.65;
+        }
+
+        .education-item {
+            font-size: 15px;
+        }
+
+        .edu-degree {
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .edu-school {
+            color: var(--teal);
+            font-weight: 500;
+        }
+
+        .edu-year {
+            font-size: 13px;
+            color: var(--gray-400);
+        }
+
+        footer {
+            background: var(--navy);
+            padding: 32px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--teal), var(--green-bright), var(--green-mid));
+        }
+
+        .footer-text {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            color: var(--gray-400);
+        }
+
+        .footer-text strong {
+            color: var(--white);
+        }
+
+        .footer-text .accent {
+            color: var(--green-bright);
+        }
+
+        .footer-sub {
+            font-size: 12px;
+            color: var(--gray-600);
+            margin-top: 8px;
+        }
+
+        @media (max-width: 640px) {
+            header, .candidate-banner, .resume-body, .back-link, footer {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .skill-label {
+                margin-top: 6px;
+                padding-bottom: 0;
+            }
+            .skill-value {
+                padding-top: 0;
+            }
+            .candidate-contact {
+                flex-direction: column;
+                gap: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="back-link">
+        <a href="index.html">Back to All Candidates</a>
+    </div>
+
+    <header>
+        <div class="header-brand">Wingz<span>.</span></div>
+        <div class="header-subtitle">Candidate Resume</div>
+    </header>
+
+    <div class="candidate-banner">
+        <div class="candidate-name">Gildardo Guerra</div>
+        <div class="candidate-title">Full-Stack Engineer | Colombia</div>
+        <div class="candidate-contact">
+            <span><a href="mailto:gildardoguerra09@gmail.com">gildardoguerra09@gmail.com</a></span>
+            <span><a href="https://linkedin.com/in/gildardo-guera" target="_blank">linkedin.com/in/gildardo-guera</a></span>
+        </div>
+    </div>
+
+    <div class="resume-body">
+
+        <div class="section">
+            <div class="section-title">Summary</div>
+            <p class="summary-text">
+                Full-Stack Engineer with 6+ years of professional experience building scalable web backends and cross-platform mobile applications. Proficient in Python, Django, and Django REST Framework for designing and maintaining high-performance REST APIs, with strong experience in PostgreSQL schema design, query optimization, and database migrations. Skilled in React Native for iOS and Android mobile development.
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-label">Backend</div>
+                <div class="skill-value">Python, Django, Django REST Framework (DRF), FastAPI, Flask, Node.js, Express.js, REST APIs, GraphQL, Microservices</div>
+
+                <div class="skill-label">Mobile</div>
+                <div class="skill-value">React Native (iOS &amp; Android), bare workflow, Metro bundler, Redux Toolkit, RTK Query</div>
+
+                <div class="skill-label">Frontend</div>
+                <div class="skill-value">React.js, Next.js, TypeScript, JavaScript, HTML, CSS, TailwindCSS</div>
+
+                <div class="skill-label">Databases</div>
+                <div class="skill-value">PostgreSQL, MySQL, MongoDB, Redis, DynamoDB, Firebase, Supabase</div>
+
+                <div class="skill-label">Testing</div>
+                <div class="skill-value">Unit testing, integration testing, Jest, Django test framework</div>
+
+                <div class="skill-label">DevOps &amp; Cloud</div>
+                <div class="skill-value">Docker, Kubernetes, AWS (Lambda, EC2, S3, DynamoDB, CloudWatch), GitHub Actions, GitLab CI, Jenkins</div>
+
+                <div class="skill-label">Languages</div>
+                <div class="skill-value">Python, TypeScript, JavaScript, SQL, Go, C#, Java</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Work Experience</div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Full-Stack Engineer</div>
+                    <div class="exp-company">Kradeon</div>
+                    <div class="exp-meta">Remote | Jun 2025 - Present</div>
+                </div>
+                <div class="exp-desc">
+                    Designed scalable REST APIs using Django and DRF. Built React Native mobile features. Designed PostgreSQL schemas. Collaborated on AWS deployment with Docker.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Full-Stack Engineer</div>
+                    <div class="exp-company">ReversOZ</div>
+                    <div class="exp-meta">Remote | Feb 2024 - Jun 2025</div>
+                </div>
+                <div class="exp-desc">
+                    Developed backend APIs using DRF. Built React Native mobile features for iOS/Android. Wrote unit and integration tests.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Full-Stack Engineer</div>
+                    <div class="exp-company">Lazyapeofficial</div>
+                    <div class="exp-meta">Remote | Sep 2022 - Feb 2024</div>
+                </div>
+                <div class="exp-desc">
+                    Built scalable backend APIs using Python and Node.js. Developed React Native mobile apps. Implemented CI/CD pipelines with GitHub Actions.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Full-Stack Engineer</div>
+                    <div class="exp-company">CryptoCats</div>
+                    <div class="exp-meta">Remote | Jul 2020 - Aug 2022</div>
+                </div>
+                <div class="exp-desc">
+                    Developed full-stack web and mobile applications using Python (Django/Flask), React.js, React Native. Led code reviews and mentored junior engineers.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Software Developer</div>
+                    <div class="exp-company">Lingnan University</div>
+                    <div class="exp-meta">Hong Kong | Oct 2019 - Jun 2020</div>
+                </div>
+                <div class="exp-desc">
+                    Built backend services and REST APIs using Python and Node.js for research prototypes.
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="education-item">
+                <div class="edu-degree">Bachelor's Degree in Computer Science</div>
+                <div class="edu-school">Lingnan University, Hong Kong</div>
+                <div class="edu-year">2015 - 2019</div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-text">
+            Presented by <strong>Sagan</strong> for <strong class="accent">Wingz</strong>
+        </div>
+        <div class="footer-sub">getsagan.com &mdash; Redefining Recruitment</div>
+    </footer>
+
+</body>
+</html>
