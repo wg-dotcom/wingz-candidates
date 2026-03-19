@@ -184,33 +184,27 @@
 
     /* ─── ADVISOR CARD ─── */
     .advisor-section {
-      max-width: 800px;
-      margin: 20px auto 0;
-      padding: 0 24px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px 48px;
     }
     .advisor-card {
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 20px 28px;
+      padding: 28px 32px;
       display: flex;
-      align-items: center;
-      gap: 16px;
+      align-items: flex-start;
+      gap: 20px;
       box-shadow: var(--shadow-sm);
     }
     .advisor-avatar {
-      width: 44px;
-      height: 44px;
-      background: linear-gradient(135deg, var(--teal), var(--green-mid));
+      width: 72px;
+      height: 72px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       flex-shrink: 0;
-      color: white;
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      font-size: 16px;
+      object-fit: cover;
+      border: 3px solid var(--cream);
     }
     .advisor-info {
       flex: 1;
@@ -221,18 +215,53 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--teal);
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
     .advisor-name {
       font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 15px;
+      font-weight: 700;
+      font-size: 17px;
       color: var(--text-dark);
     }
     .advisor-role {
       font-size: 13px;
       color: var(--text-light);
+      margin-bottom: 10px;
     }
+    .advisor-summary {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.65;
+    }
+
+    /* ─── RECRUITER NOTE ─── */
+    .recruiter-note-section {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px 48px;
+    }
+    .recruiter-note-card {
+      background: var(--white);
+      border-left: 4px solid var(--green-bright);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      box-shadow: var(--shadow-sm);
+    }
+    .recruiter-note-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+    .recruiter-note-card p {
+      font-size: 14.5px;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+    .recruiter-note-card p + p { margin-top: 10px; }
 
     /* ─── BATCH BADGE ─── */
     .batch-info {
@@ -609,18 +638,6 @@
     </div>
   </div>
 
-  <!-- ═══ ADVISOR ═══ -->
-  <div class="advisor-section">
-    <div class="advisor-card">
-      <div class="advisor-avatar">GL</div>
-      <div class="advisor-info">
-        <div class="advisor-label">Your Talent Advisor</div>
-        <div class="advisor-name">Guillermo Lindo</div>
-        <div class="advisor-role">White Glove Talent Advisor &middot; Sagan</div>
-      </div>
-    </div>
-  </div>
-
   <!-- ═══ BATCH INFO ═══ -->
   <div class="batch-info">
     <div class="batch-pill">
@@ -632,7 +649,7 @@
   <!-- ═══ SECTION LABEL ═══ -->
   <div class="section-label">
     <h2>Candidate Profiles</h2>
-    <p>Click "Branded Resume" for the full profile or "Intro Video" to hear directly from each candidate.</p>
+    <p>Click "Resume" for the full profile or "Intro Video" to hear directly from each candidate.</p>
   </div>
 
   <!-- ═══ CANDIDATES ═══ -->
@@ -700,7 +717,7 @@
         <div class="btn-group">
           <a class="btn btn-outline" href="resume-gildardo.html" target="_blank">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            Branded Resume
+            Resume
           </a>
           <a class="btn btn-primary" href="https://drive.google.com/file/d/1CEPgvMpEJ7GoLzFM7vQtL4TEGRUYF6R9/view?usp=sharing" target="_blank">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -772,7 +789,7 @@
         <div class="btn-group">
           <a class="btn btn-outline" href="resume-fernando.html" target="_blank">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            Branded Resume
+            Resume
           </a>
           <a class="btn btn-primary" href="https://drive.google.com/file/d/1Y3RRZ7PGetnOiyulLbZ6pb27B55nm5lt/view" target="_blank">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -843,7 +860,7 @@
         <div class="btn-group">
           <a class="btn btn-outline" href="resume-edgard.html" target="_blank">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            Branded Resume
+            Resume
           </a>
           <a class="btn btn-primary" href="https://drive.google.com/file/d/1Ewy21wJpJeXKD8pEShqvEcU5GVN8bCC6/view" target="_blank">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -946,6 +963,34 @@
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+
+  <!-- ═══ RECRUITER'S NOTE ═══ -->
+  <div class="recruiter-note-section">
+    <div class="section-label" style="padding-bottom:20px;">
+      <h2>Recruiter's Note</h2>
+    </div>
+    <div class="recruiter-note-card">
+      <div class="recruiter-note-title">From Your Talent Advisor</div>
+      <p>All three candidates bring strong Django and React Native backgrounds, which are the core requirements for this role. Gildardo is your closest match on the technical side, with deep DRF expertise across four consecutive production roles and solid PostgreSQL optimization experience. Edgard stands out for his DevOps discipline, TDD methodology, and measurable performance wins. Fernando brings the most seniority (8 years) and the strongest enterprise mobile pedigree through Globant and Samsung.</p>
+      <p>Since this is your first LATAM experiment after years of successful Philippine hires, all three candidates offer excellent timezone overlap and cultural proximity for EST-hours collaboration. I recommend starting interviews with Gildardo and Edgard given their Django-first profiles, then Fernando if you want to explore a mobile-heavy engineer who can also support the backend.</p>
+    </div>
+  </div>
+
+  <!-- ═══ YOUR TALENT ADVISOR ═══ -->
+  <div class="advisor-section">
+    <div class="section-label" style="padding-bottom:20px;">
+      <h2>Your Talent Advisor</h2>
+    </div>
+    <div class="advisor-card">
+      <img class="advisor-avatar" src="https://avatars.slack-edge.com/2025-12-15/10131757447604_d52c3d1e861ef5679144_original.jpg" alt="Guillermo Lindo" />
+      <div class="advisor-info">
+        <div class="advisor-label">White Glove Talent Advisor</div>
+        <div class="advisor-name">Guillermo Lindo</div>
+        <div class="advisor-role">Sagan &middot; guillermo.l@getsagan.com</div>
+        <p class="advisor-summary">Guille is your dedicated talent advisor for this search. He manages the full candidate pipeline for your Full Stack Engineer role, from sourcing through final placement. He is your direct point of contact for scheduling interviews, sharing feedback, and coordinating next steps. Reach out to him anytime with questions about these candidates or the process.</p>
+      </div>
     </div>
   </div>
 
