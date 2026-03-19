@@ -234,34 +234,26 @@
       line-height: 1.65;
     }
 
-    /* ─── RECRUITER NOTE ─── */
-    .recruiter-note-section {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 0 24px 48px;
+    /* ─── RECRUITER NOTE (inside card) ─── */
+    .card-recruiter-note {
+      padding: 20px 32px 24px;
+      border-top: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(0,249,184,0.04) 0%, rgba(13,148,136,0.04) 100%);
     }
-    .recruiter-note-card {
-      background: var(--white);
-      border-left: 4px solid var(--green-bright);
-      border-radius: var(--radius);
-      padding: 28px 32px;
-      box-shadow: var(--shadow-sm);
-    }
-    .recruiter-note-title {
+    .card-recruiter-note .recruiter-note-title {
       font-family: 'Inter', sans-serif;
       font-size: 11px;
       font-weight: 700;
       color: var(--teal);
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
-    .recruiter-note-card p {
-      font-size: 14.5px;
+    .card-recruiter-note p {
+      font-size: 14px;
       color: var(--text-mid);
       line-height: 1.7;
     }
-    .recruiter-note-card p + p { margin-top: 10px; }
 
     /* ─── BATCH BADGE ─── */
     .batch-info {
@@ -725,12 +717,12 @@
           </a>
         </div>
       </div>
-    </article>
 
-    <div class="recruiter-note-card" style="max-width:1080px; margin:0 auto -12px; border-radius:0 0 14px 14px;">
-      <div class="recruiter-note-title">Recruiter's Note</div>
-      <p>Gildardo is your strongest Django-first match. Four consecutive full-stack roles all centered on Django + DRF, with hands-on React Native on every project. He has the exact stack you need: scalable REST APIs, PostgreSQL optimization, and AWS deployment. His track record in fully remote teams, owning features end-to-end, maps directly to how Wingz operates. At $4K/mo he sits at the top of your budget but brings the deepest technical alignment of the three.</p>
-    </div>
+      <div class="card-recruiter-note">
+        <div class="recruiter-note-title">Recruiter's Note</div>
+        <p>Gildardo is your strongest Django-first match. Four consecutive full-stack roles all centered on Django + DRF, with hands-on React Native on every project. He has the exact stack you need: scalable REST APIs, PostgreSQL optimization, and AWS deployment. His track record in fully remote teams, owning features end-to-end, maps directly to how Wingz operates. At $4K/mo he sits at the top of your budget but brings the deepest technical alignment of the three.</p>
+      </div>
+    </article>
 
     <!-- ──── CANDIDATE 2: FERNANDO PAREDES RIOS ──── -->
     <article class="card" id="fernando">
@@ -802,12 +794,12 @@
           </a>
         </div>
       </div>
-    </article>
 
-    <div class="recruiter-note-card" style="max-width:1080px; margin:0 auto -12px; border-radius:0 0 14px 14px;">
-      <div class="recruiter-note-title">Recruiter's Note</div>
-      <p>Fernando brings the most seniority (8 years) and the strongest mobile pedigree of the batch. Enterprise clients through Globant (Backcountry, Banco de Chile) and Samsung give him exposure to SOC security standards and large-scale apps. His Django experience is lighter than the other two, but he has real backend production work at Urbano Express and Telefonica. He also brings native module depth (Swift, Kotlin) that the others don't. Best fit if you need someone who can lead on the mobile side and contribute to the backend. At $3K/mo, he's the most cost-effective option.</p>
-    </div>
+      <div class="card-recruiter-note">
+        <div class="recruiter-note-title">Recruiter's Note</div>
+        <p>Fernando brings the most seniority (8 years) and the strongest mobile pedigree of the batch. Enterprise clients through Globant (Backcountry, Banco de Chile) and Samsung give him exposure to SOC security standards and large-scale apps. His Django experience is lighter than the other two, but he has real backend production work at Urbano Express and Telefonica. He also brings native module depth (Swift, Kotlin) that the others don't. Best fit if you need someone who can lead on the mobile side and contribute to the backend. At $3K/mo, he's the most cost-effective option.</p>
+      </div>
+    </article>
 
     <!-- ──── CANDIDATE 3: EDGARD FERREIRA RODRIGUES ──── -->
     <article class="card" id="edgard">
@@ -878,12 +870,12 @@
           </a>
         </div>
       </div>
-    </article>
 
-    <div class="recruiter-note-card" style="max-width:1080px; margin:0 auto -12px; border-radius:0 0 14px 14px;">
-      <div class="recruiter-note-title">Recruiter's Note</div>
-      <p>Edgard is the most well-rounded engineer in this batch. His Django + DRF work at IMP Sistemas handles thousands of daily transactions, and he has direct experience building booking flows in React Native, which is close to what Wingz needs. The measurable wins speak for themselves: 40% faster API response times, 30% fewer mobile issues, and 80%+ test coverage. His DevOps and observability stack (Terraform, Sentry, Datadog, Grafana) means he can own reliability, not just features. At $3.7K/mo, strong value for the depth he brings.</p>
-    </div>
+      <div class="card-recruiter-note">
+        <div class="recruiter-note-title">Recruiter's Note</div>
+        <p>Edgard is the most well-rounded engineer in this batch. His Django + DRF work at IMP Sistemas handles thousands of daily transactions, and he has direct experience building booking flows in React Native, which is close to what Wingz needs. The measurable wins speak for themselves: 40% faster API response times, 30% fewer mobile issues, and 80%+ test coverage. His DevOps and observability stack (Terraform, Sentry, Datadog, Grafana) means he can own reliability, not just features. At $3.7K/mo, strong value for the depth he brings.</p>
+      </div>
+    </article>
 
   </div>
 
