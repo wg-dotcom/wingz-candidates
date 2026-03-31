@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jes&uacute;s A - Full Stack Engineer | Wingz Candidate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #131A1B;
+            --teal: #0D9488;
+            --green-bright: #00F9B8;
+            --green-mid: #00B692;
+            --white: #FFFFFF;
+            --gray-50: #F8FAFB;
+            --gray-100: #F1F5F4;
+            --gray-200: #E2E8E7;
+            --gray-400: #94A3A0;
+            --gray-600: #4B5E5A;
+            --gray-700: #374845;
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--gray-50); color: var(--navy); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .back-link { display: block; background: var(--navy); padding: 12px 40px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; }
+        .back-link a { color: var(--green-bright); text-decoration: none; transition: color 0.2s; }
+        .back-link a:hover { color: var(--white); }
+        .back-link a::before { content: "\2190\00a0\00a0"; }
+        header { background: var(--navy); padding: 48px 40px 52px; position: relative; overflow: hidden; }
+        header::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--teal), var(--green-bright), var(--green-mid)); }
+        .header-brand { font-family: 'DM Sans', sans-serif; font-size: 32px; font-weight: 700; color: var(--white); letter-spacing: -0.5px; margin-bottom: 4px; }
+        .header-brand span { color: var(--green-bright); }
+        .header-subtitle { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; }
+        .candidate-banner { background: linear-gradient(135deg, var(--teal), var(--green-mid)); padding: 36px 40px; color: var(--white); }
+        .candidate-name { font-family: 'DM Sans', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
+        .candidate-title { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 12px; }
+        .candidate-contact { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; opacity: 0.85; }
+        .resume-body { max-width: 900px; margin: 0 auto; padding: 40px 40px 60px; }
+        .section { margin-bottom: 36px; }
+        .section-title { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 1.5px; padding-bottom: 10px; border-bottom: 2px solid var(--gray-200); margin-bottom: 18px; }
+        .summary-text { font-size: 15px; color: var(--gray-700); line-height: 1.75; }
+        .skills-grid { display: grid; grid-template-columns: 160px 1fr; gap: 10px 20px; font-size: 14px; }
+        .skill-label { font-weight: 600; color: var(--navy); padding: 4px 0; }
+        .skill-value { color: var(--gray-600); padding: 4px 0; line-height: 1.6; }
+        .experience-item { margin-bottom: 24px; padding-left: 20px; border-left: 3px solid var(--green-mid); }
+        .experience-item:last-child { margin-bottom: 0; }
+        .exp-header { margin-bottom: 8px; }
+        .exp-role { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; color: var(--navy); }
+        .exp-company { font-size: 14px; font-weight: 500; color: var(--teal); }
+        .exp-meta { font-size: 13px; color: var(--gray-400); margin-top: 2px; }
+        .exp-desc { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+        .education-item { font-size: 15px; }
+        .edu-degree { font-weight: 600; color: var(--navy); }
+        .edu-school { color: var(--teal); font-weight: 500; }
+        .edu-year { font-size: 13px; color: var(--gray-400); }
+        footer { background: var(--navy); padding: 32px 40px; text-align: center; position: relative; }
+        footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--teal), var(--green-bright), var(--green-mid)); }
+        .footer-text { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--gray-400); }
+        .footer-text strong { color: var(--white); }
+        .footer-text .accent { color: var(--green-bright); }
+        .footer-sub { font-size: 12px; color: var(--gray-600); margin-top: 8px; }
+        @media (max-width: 640px) {
+            header, .candidate-banner, .resume-body, .back-link, footer { padding-left: 20px; padding-right: 20px; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .candidate-contact { flex-direction: column; gap: 6px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="back-link"><a href="index.html">Back to All Candidates</a></div>
+    <header>
+        <div class="header-brand">Wingz<span>.</span></div>
+        <div class="header-subtitle">Candidate Resume</div>
+    </header>
+    <div class="candidate-banner">
+        <div class="candidate-name">Jes&uacute;s A</div>
+        <div class="candidate-title">Sr. Software Engineer (Full Stack) | Bilingual | Mexico</div>
+        <div class="candidate-contact"><span>Mexico</span></div>
+    </div>
+    <div class="resume-body">
+        <div class="section">
+            <div class="section-title">Summary</div>
+            <p class="summary-text">Senior Full Stack Software Engineer with 6 years of experience building large-scale platforms, search-driven backend systems, and cloud-native microservices using React, Python, ASP.NET and Node.js. Strong expertise in designing systems, high-performance APIs, search and data retrieval pipelines, event-driven architectures, and real-world production support for mobile, web, AI and IoT applications. Deep experience with AWS, GCP, Kubernetes, observability, and scalable data systems.</p>
+        </div>
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-label">Languages</div>
+                <div class="skill-value">Python, JavaScript, C#, TypeScript, Rust, Golang</div>
+                <div class="skill-label">Frameworks</div>
+                <div class="skill-value">Django (DRF), FastAPI, Flask, .NET Core, Node.js, NestJS, React, Next.js</div>
+                <div class="skill-label">Distributed</div>
+                <div class="skill-value">Kafka, NATS, RabbitMQ, CQRS, Microservices, gRPC, GraphQL, Protobuf</div>
+                <div class="skill-label">Cloud &amp; DevOps</div>
+                <div class="skill-value">AWS (EC2, S3, Lambda, RDS, DynamoDB), GCP, Kubernetes, Docker, Helm, Terraform, ArgoCD</div>
+                <div class="skill-label">Observability</div>
+                <div class="skill-value">Prometheus, Grafana, OpenTelemetry, Jaeger, ELK, Datadog</div>
+                <div class="skill-label">Databases</div>
+                <div class="skill-value">PostgreSQL, MySQL, MongoDB, Cassandra, Redis, MS SQL, Yugabyte, CockroachDB</div>
+                <div class="skill-label">AI / ML</div>
+                <div class="skill-value">OpenAI, Claude, AWS Bedrock, RAG pipelines, Agentic workflows</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">Work Experience</div>
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Sr. Software Engineer</div>
+                    <div class="exp-company">Softtek</div>
+                    <div class="exp-meta">Monterrey, Mexico (Remote) | Aug 2025 - Mar 2026</div>
+                </div>
+                <div class="exp-desc">Designed production-grade Python microservices and REST/gRPC APIs for high-concurrency workloads on AWS and GCP. Built React/Next.js dashboard UIs. Developed API-first backend services using Django (DRF), FastAPI, and NestJS. Implemented event-driven workflows with Kafka and RabbitMQ. Reduced stalled task tickets by 90% with Prometheus/Grafana monitoring. Built production-grade AI systems with RAG pipelines and agentic workflows.</div>
+            </div>
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Full Stack Developer</div>
+                    <div class="exp-company">Wizeline</div>
+                    <div class="exp-meta">Guadalajara, Mexico | Jan 2023 - May 2025</div>
+                </div>
+                <div class="exp-desc">Primary backend engineer using Python (Django/Flask), .NET Core, and Node.js for real-time order services. Developed real-time stream processing service resulting in 5% increase in accepted rides. Built high-throughput backend services integrating with EVM-compatible blockchains. Integrated Terraform workflows into CI/CD pipelines. Configured monitoring with Grafana, Fluentd, Kibana, and Elasticsearch.</div>
+            </div>
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Web Developer</div>
+                    <div class="exp-company">Runa</div>
+                    <div class="exp-meta">Mexico City, Mexico | Jan 2020 - Nov 2022</div>
+                </div>
+                <div class="exp-desc">Built production-grade systems using React, Flask, NestJS, and Node.js on AWS. Developed data processing pipelines with Python, Pandas, and NumPy. Created GraphQL APIs and data-ingestion pipelines using Apache Spark. Developed IoT microservices in Python and Golang.</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="education-item">
+                <div class="edu-degree">Bachelor in Computer Science</div>
+                <div class="edu-school">Instituto Tecnol&oacute;gico de Tijuana</div>
+                <div class="edu-year">2016 - 2020</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-text">Presented by <strong>Sagan</strong> for <strong class="accent">Wingz</strong></div>
+        <div class="footer-sub">getsagan.com &mdash; Redefining Recruitment</div>
+    </footer>
+</body>
+</html>

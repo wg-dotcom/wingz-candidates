@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan C - Full Stack Engineer | Wingz Candidate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #131A1B;
+            --teal: #0D9488;
+            --green-bright: #00F9B8;
+            --green-mid: #00B692;
+            --white: #FFFFFF;
+            --gray-50: #F8FAFB;
+            --gray-100: #F1F5F4;
+            --gray-200: #E2E8E7;
+            --gray-400: #94A3A0;
+            --gray-600: #4B5E5A;
+            --gray-700: #374845;
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--gray-50); color: var(--navy); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .back-link { display: block; background: var(--navy); padding: 12px 40px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; }
+        .back-link a { color: var(--green-bright); text-decoration: none; transition: color 0.2s; }
+        .back-link a:hover { color: var(--white); }
+        .back-link a::before { content: "\2190\00a0\00a0"; }
+        header { background: var(--navy); padding: 48px 40px 52px; position: relative; overflow: hidden; }
+        header::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--teal), var(--green-bright), var(--green-mid)); }
+        .header-brand { font-family: 'DM Sans', sans-serif; font-size: 32px; font-weight: 700; color: var(--white); letter-spacing: -0.5px; margin-bottom: 4px; }
+        .header-brand span { color: var(--green-bright); }
+        .header-subtitle { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; }
+        .candidate-banner { background: linear-gradient(135deg, var(--teal), var(--green-mid)); padding: 36px 40px; color: var(--white); }
+        .candidate-name { font-family: 'DM Sans', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
+        .candidate-title { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 12px; }
+        .candidate-contact { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; opacity: 0.85; }
+        .resume-body { max-width: 900px; margin: 0 auto; padding: 40px 40px 60px; }
+        .section { margin-bottom: 36px; }
+        .section-title { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 1.5px; padding-bottom: 10px; border-bottom: 2px solid var(--gray-200); margin-bottom: 18px; }
+        .summary-text { font-size: 15px; color: var(--gray-700); line-height: 1.75; }
+        .skills-grid { display: grid; grid-template-columns: 160px 1fr; gap: 10px 20px; font-size: 14px; }
+        .skill-label { font-weight: 600; color: var(--navy); padding: 4px 0; }
+        .skill-value { color: var(--gray-600); padding: 4px 0; line-height: 1.6; }
+        .experience-item { margin-bottom: 24px; padding-left: 20px; border-left: 3px solid var(--green-mid); }
+        .experience-item:last-child { margin-bottom: 0; }
+        .exp-header { margin-bottom: 8px; }
+        .exp-role { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; color: var(--navy); }
+        .exp-company { font-size: 14px; font-weight: 500; color: var(--teal); }
+        .exp-meta { font-size: 13px; color: var(--gray-400); margin-top: 2px; }
+        .exp-desc { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+        .education-item { font-size: 15px; }
+        .edu-degree { font-weight: 600; color: var(--navy); }
+        .edu-school { color: var(--teal); font-weight: 500; }
+        .edu-year { font-size: 13px; color: var(--gray-400); }
+        footer { background: var(--navy); padding: 32px 40px; text-align: center; position: relative; }
+        footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--teal), var(--green-bright), var(--green-mid)); }
+        .footer-text { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--gray-400); }
+        .footer-text strong { color: var(--white); }
+        .footer-text .accent { color: var(--green-bright); }
+        .footer-sub { font-size: 12px; color: var(--gray-600); margin-top: 8px; }
+        @media (max-width: 640px) {
+            header, .candidate-banner, .resume-body, .back-link, footer { padding-left: 20px; padding-right: 20px; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .candidate-contact { flex-direction: column; gap: 6px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="back-link"><a href="index.html">Back to All Candidates</a></div>
+    <header>
+        <div class="header-brand">Wingz<span>.</span></div>
+        <div class="header-subtitle">Candidate Resume</div>
+    </header>
+    <div class="candidate-banner">
+        <div class="candidate-name">Juan C</div>
+        <div class="candidate-title">Technical Leader | Senior Full Stack Engineer | Guatemala</div>
+        <div class="candidate-contact"><span>Guatemala</span></div>
+    </div>
+    <div class="resume-body">
+        <div class="section">
+            <div class="section-title">Summary</div>
+            <p class="summary-text">Engineer with over 12 years of experience in software development. Specialist in Python (9 years), Java (12 years), and full-stack development. Expert in migration from legacy to microservices architecture, DevOps, and mobile development. Proven track record leading complex technology migrations and optimizing systems to improve performance by up to 70%. Passionate about creating scalable, high-impact solutions.</p>
+        </div>
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-label">Languages</div>
+                <div class="skill-value">Python (9 years), Java (12 years), Kotlin (4 years), JavaScript (6 years), Go (2 years), TypeScript</div>
+                <div class="skill-label">Frameworks</div>
+                <div class="skill-value">FastAPI, Django, Flask, Spring Boot, GraphQL, Node.js, ExpressJS, NX, React Native</div>
+                <div class="skill-label">Databases</div>
+                <div class="skill-value">MySQL, PostgreSQL, MongoDB, SQLite, SQL Server 2025, Redis</div>
+                <div class="skill-label">AI / ML</div>
+                <div class="skill-value">PyTorch, CUDA, sentence-transformers, LangChain, Claude AI</div>
+                <div class="skill-label">DevOps &amp; Cloud</div>
+                <div class="skill-value">Docker, Kubernetes, AWS (AppSync, CloudFront, Lambda, EC2, S3), NGINX, GitHub Actions</div>
+                <div class="skill-label">Architecture</div>
+                <div class="skill-value">Monoliths, Microservices, Hexagonal, Agile, Waterfall</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">Work Experience</div>
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Team Lead</div>
+                    <div class="exp-company">Orion Mobility</div>
+                    <div class="exp-meta">Remote | Nov 2025 - Jan 2026</div>
+                </div>
+                <div class="exp-desc">Built high-performance document search system with GPU-accelerated semantic search. Implemented hybrid search engine achieving sub-second query times across 800+ policy documents. Developed RESTful API with FastAPI for real-time expense validation.</div>
+            </div>
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Team Lead</div>
+                    <div class="exp-company">Attom Labs</div>
+                    <div class="exp-meta">Remote | Mar 2025 - Nov 2025</div>
+                </div>
+                <div class="exp-desc">Led team that built the second generation of a fiber optic internet platform. Migrated PHP monolith to microservices using NX monorepo. Implemented 11 microservices, web app, and React Native mobile app. Coordinated DevOps for deployment on AWS with Kubernetes.</div>
+            </div>
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Team Lead</div>
+                    <div class="exp-company">J Blanton Plumbing</div>
+                    <div class="exp-meta">Remote | Jul 2024 - Mar 2025</div>
+                </div>
+                <div class="exp-desc">Migrated WordPress to GO and Next.js. Built admin dashboard with real-time statistics. Implemented real-time chatbot using Claude models on AWS. Created SEO review algorithm for 5,000+ pages. Optimized static resources with S3 and CloudFront on AWS.</div>
+            </div>
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Team Lead</div>
+                    <div class="exp-company">Devsu</div>
+                    <div class="exp-meta">Remote | Aug 2022 - Jun 2024</div>
+                </div>
+                <div class="exp-desc">Migrated React Native app to native Kotlin for 100,000 users (Fiducia, Ecuador). Migrated PHP API to Python with FastAPI and GraphQL for 80,000 daily users (Ciba Health, USA). Implemented security features with facial recognition and encryption.</div>
+            </div>
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Full Stack Developer</div>
+                    <div class="exp-company">D3sarrollo</div>
+                    <div class="exp-meta">Remote | Jan 2017 - Apr 2022</div>
+                </div>
+                <div class="exp-desc">Developed web and mobile applications for small businesses. Built microservices architecture systems. Deployed on AWS. Developed and maintained Android app "Topografia GPS" (available on Google Play).</div>
+            </div>
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-role">Developer</div>
+                    <div class="exp-company">Ministry of Public Health</div>
+                    <div class="exp-meta">Guatemala | Jan 2014 - Dec 2016</div>
+                </div>
+                <div class="exp-desc">Developed offline SIGSA system for statistical control across Health Areas, Centers, Posts, and Hospitals using Python, Django, and JavaScript.</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="education-item">
+                <div class="edu-degree">Bachelor's Degree in Engineering</div>
+                <div class="edu-school">Universidad de San Carlos de Guatemala</div>
+                <div class="edu-year">2007 - 2018</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">Certifications</div>
+            <div class="education-item" style="margin-bottom:8px;">
+                <div class="edu-degree">React &amp; TypeScript - The Practical Guide (Udemy)</div>
+            </div>
+            <div class="education-item" style="margin-bottom:8px;">
+                <div class="edu-degree">Langchain and LLM: Develop AI Applications in Python (Udemy)</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-text">Presented by <strong>Sagan</strong> for <strong class="accent">Wingz</strong></div>
+        <div class="footer-sub">getsagan.com &mdash; Redefining Recruitment</div>
+    </footer>
+</body>
+</html>

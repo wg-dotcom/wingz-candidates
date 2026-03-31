@@ -255,6 +255,45 @@
       line-height: 1.7;
     }
 
+    /* ─── BATCH TABS ─── */
+    .batch-tabs {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 48px 24px 0;
+      display: flex;
+      gap: 8px;
+    }
+    .batch-tab {
+      padding: 12px 28px;
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      border: 2px solid var(--border);
+      background: var(--white);
+      color: var(--text-mid);
+      transition: all 0.25s ease;
+    }
+    .batch-tab:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+    .batch-tab.active {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+    .batch-tab .tab-date {
+      font-weight: 400;
+      opacity: 0.7;
+      margin-left: 6px;
+      font-size: 12px;
+    }
+    .batch-content { display: none; }
+    .batch-content.active { display: block; }
+
     /* ─── BATCH BADGE ─── */
     .batch-info {
       text-align: center;
@@ -617,7 +656,7 @@
       </div>
       <div class="hero-meta-item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        3 Candidates
+        7 Candidates
       </div>
     </div>
   </section>
@@ -625,10 +664,19 @@
   <!-- ═══ INTRO NOTE ═══ -->
   <div class="intro-note">
     <div class="intro-card">
-      <p>Hi <strong>Randy</strong>, here is your first batch of Full Stack Engineer candidates for Wingz. Each profile has been vetted for <strong>Django + Django REST Framework</strong> proficiency and <strong>React Native</strong> mobile experience, matching your technical stack and schedule requirements.</p>
-      <p>These engineers are based across LATAM with strong timezone overlap (EST hours), bringing the cultural proximity and schedule alignment that makes remote collaboration seamless. All candidates are available for a <strong>Monday to Friday, 8 AM to 5 PM EST</strong> commitment.</p>
+      <p>Hi <strong>Randy</strong>, here are your Full Stack Engineer candidates for Wingz. Each profile has been vetted for <strong>Django + Django REST Framework</strong> proficiency and <strong>React Native</strong> mobile experience, matching your technical stack and schedule requirements.</p>
+      <p>These engineers are based across LATAM with strong timezone overlap (EST hours), bringing the cultural proximity and schedule alignment that makes remote collaboration seamless. All candidates are available for a <strong>Monday to Friday, 8 AM to 5 PM EST</strong> commitment. Use the batch tabs below to navigate between candidate groups.</p>
     </div>
   </div>
+
+  <!-- ═══ BATCH TABS ═══ -->
+  <div class="batch-tabs">
+    <button class="batch-tab active" onclick="switchBatch('batch1')">Batch 1<span class="tab-date">Mar 18</span></button>
+    <button class="batch-tab" onclick="switchBatch('batch2')">Batch 2<span class="tab-date">Mar 30</span></button>
+  </div>
+
+  <!-- ═══════════════ BATCH 1 ═══════════════ -->
+  <div id="batch1" class="batch-content active">
 
   <!-- ═══ BATCH INFO ═══ -->
   <div class="batch-info">
@@ -973,6 +1021,447 @@
     </div>
   </div>
 
+  </div><!-- /batch1 -->
+
+  <!-- ═══════════════ BATCH 2 ═══════════════ -->
+  <div id="batch2" class="batch-content">
+
+  <!-- ═══ BATCH INFO ═══ -->
+  <div class="batch-info">
+    <div class="batch-pill">
+      <span class="batch-num">Batch 2</span>
+      March 30, 2026
+    </div>
+  </div>
+
+  <!-- ═══ SECTION LABEL ═══ -->
+  <div class="section-label">
+    <h2>Candidate Profiles</h2>
+    <p>Click "Resume" for the full profile or "Intro Video" to hear directly from each candidate.</p>
+  </div>
+
+  <!-- ═══ CANDIDATES ═══ -->
+  <div class="candidates">
+
+    <!-- ──── CANDIDATE 1: JUAN C ──── -->
+    <article class="card" id="juan">
+      <div class="card-header">
+        <div class="rank-badge"><span>1</span></div>
+        <div class="card-name-block">
+          <div class="card-name">Juan C</div>
+          <div class="card-meta-row">
+            <div class="card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Guatemala
+            </div>
+            <div class="card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <strong>12+ years</strong> experience
+            </div>
+            <div class="card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              B.Eng, USAC
+            </div>
+          </div>
+        </div>
+        <div class="card-actions"></div>
+      </div>
+
+      <div class="tags-row">
+        <span class="tag python">Python</span>
+        <span class="tag django">Django</span>
+        <span class="tag django">FastAPI</span>
+        <span class="tag react-native">React Native</span>
+        <span class="tag postgres">PostgreSQL</span>
+        <span class="tag aws">AWS</span>
+        <span class="tag">Kubernetes</span>
+        <span class="tag">Docker</span>
+        <span class="tag">GraphQL</span>
+        <span class="tag">Go</span>
+        <span class="tag">AI/ML</span>
+      </div>
+
+      <div class="card-body">
+        <div class="card-section">
+          <div class="card-section-title">Key Experience</div>
+          <div class="experience-item"><div class="exp-role">Team Lead</div><div class="exp-company">Orion Mobility</div><div class="exp-dates">Nov 2025 - Jan 2026</div></div>
+          <div class="experience-item"><div class="exp-role">Team Lead</div><div class="exp-company">Attom Labs</div><div class="exp-dates">Mar 2025 - Nov 2025</div></div>
+          <div class="experience-item"><div class="exp-role">Team Lead</div><div class="exp-company">J Blanton Plumbing</div><div class="exp-dates">Jul 2024 - Mar 2025</div></div>
+          <div class="experience-item"><div class="exp-role">Team Lead</div><div class="exp-company">Devsu (Fiducia, Ciba Health)</div><div class="exp-dates">Aug 2022 - Jun 2024</div></div>
+        </div>
+        <div class="card-section">
+          <div class="card-section-title">Why Juan C</div>
+          <ul class="strength-list">
+            <li>Most senior engineer in the batch: 12+ years spanning Python (9yr), Java (12yr), Kotlin, Go, and JavaScript across leadership roles</li>
+            <li>Proven team lead who has migrated monoliths to microservices at scale, including a PHP-to-NX migration with 11 microservices, web app, and React Native mobile app</li>
+            <li>Deep AI/ML experience: GPU-accelerated semantic search, LangChain, Claude AI integration, and RAG pipeline development in production</li>
+            <li>Migrated React Native to native Kotlin for 100,000 users and PHP API to Python/FastAPI for 80,000 daily users at Devsu</li>
+            <li>Strong DevOps: Docker, Kubernetes, AWS (AppSync, CloudFront, Lambda, EC2, S3), CI/CD pipelines, and infrastructure management</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <div class="footer-note"><strong>$4,000/mo</strong> &middot; Full-time &middot; EST hours</div>
+        <div class="btn-group">
+          <a class="btn btn-outline" href="resume-juan.html" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Resume
+          </a>
+          <a class="btn btn-primary" href="https://drive.google.com/file/d/1R_6R4ZelVHGNJRkpF-rX2ZBD3Svnv5Gb/view" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Intro Video
+          </a>
+        </div>
+      </div>
+
+      <div class="card-recruiter-note">
+        <div class="recruiter-note-title">Recruiter's Note</div>
+        <p>Juan C is the standout of Batch 2. With 12+ years of experience and four consecutive team lead roles, he brings both technical depth and leadership maturity. His migration track record is exactly what Wingz needs: he has taken monoliths to microservices multiple times (PHP to NX, React Native to native Kotlin, PHP to FastAPI). His AI/ML skills (LangChain, Claude, GPU-accelerated search) add a forward-looking edge. At $4K/mo for a senior tech lead with this range, he is strong value. English C1.</p>
+      </div>
+    </article>
+
+    <!-- ──── CANDIDATE 2: DAVID O ──── -->
+    <article class="card" id="david">
+      <div class="card-header">
+        <div class="rank-badge"><span>2</span></div>
+        <div class="card-name-block">
+          <div class="card-name">David O</div>
+          <div class="card-meta-row">
+            <div class="card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Brazil
+            </div>
+            <div class="card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <strong>9+ years</strong> experience
+            </div>
+            <div class="card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              B.Sc. Math &amp; CS
+            </div>
+          </div>
+        </div>
+        <div class="card-actions"></div>
+      </div>
+
+      <div class="tags-row">
+        <span class="tag django">Django</span>
+        <span class="tag django">DRF</span>
+        <span class="tag python">Python</span>
+        <span class="tag react-native">React Native</span>
+        <span class="tag postgres">PostgreSQL</span>
+        <span class="tag aws">AWS</span>
+        <span class="tag">Azure</span>
+        <span class="tag">Docker</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Next.js</span>
+      </div>
+
+      <div class="card-body">
+        <div class="card-section">
+          <div class="card-section-title">Key Experience</div>
+          <div class="experience-item"><div class="exp-role">Full Stack Engineer</div><div class="exp-company">Zco Corporation (Current)</div><div class="exp-dates">Jun 2022 - Present</div></div>
+          <div class="experience-item"><div class="exp-role">Full Stack Developer / Analytics Engineer</div><div class="exp-company">Ag&ecirc;ncia M2BR</div><div class="exp-dates">Apr 2019 - Apr 2022</div></div>
+          <div class="experience-item"><div class="exp-role">Full Stack Developer</div><div class="exp-company">Code Farm</div><div class="exp-dates">Dec 2017 - Jun 2019</div></div>
+        </div>
+        <div class="card-section">
+          <div class="card-section-title">Why David O</div>
+          <ul class="strength-list">
+            <li>The closest stack match in this batch: 3+ years building Django + DRF backends with React Native mobile at Zco Corporation, a US company</li>
+            <li>Deep PostgreSQL expertise: schema design, query optimization, and performance tuning across all three roles</li>
+            <li>Direct experience with real-time transactional workflows, authentication systems, and third-party API integrations through REST and webhooks</li>
+            <li>Strong analytics background from M2BR: built high-volume data platforms, automated data pipelines, and reporting dashboards</li>
+            <li>Production e-commerce experience at Code Farm: payment gateways, order processing, and logistics integrations</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <div class="footer-note"><strong>TBD</strong> &middot; Full-time &middot; EST hours</div>
+        <div class="btn-group">
+          <a class="btn btn-outline" href="resume-david.html" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Resume
+          </a>
+          <a class="btn btn-primary" href="https://www.loom.com/share/0d1a0dfec96c440bb578678c11610b24" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Intro Video
+          </a>
+        </div>
+      </div>
+
+      <div class="card-recruiter-note">
+        <div class="recruiter-note-title">Recruiter's Note</div>
+        <p>David O is the tightest Django + DRF + React Native alignment in this batch. His current role at Zco Corporation (3+ years, US company, remote) mirrors exactly how he would work at Wingz: building Django APIs consumed by React Native mobile apps. His PostgreSQL optimization runs deep across every role. The analytics engineering background at M2BR adds a data-pipeline dimension the other candidates lack. His e-commerce experience (payment gateways, order flows) maps well to the NEMT booking and transaction model. Math + CS degree from a top Brazilian university. Salary TBD pending discussion.</p>
+      </div>
+    </article>
+
+    <!-- ──── CANDIDATE 3: JESUS A ──── -->
+    <article class="card" id="jesus">
+      <div class="card-header">
+        <div class="rank-badge"><span>3</span></div>
+        <div class="card-name-block">
+          <div class="card-name">Jes&uacute;s A</div>
+          <div class="card-meta-row">
+            <div class="card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Mexico
+            </div>
+            <div class="card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <strong>6 years</strong> experience
+            </div>
+            <div class="card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              B.Sc. Computer Science
+            </div>
+          </div>
+        </div>
+        <div class="card-actions"></div>
+      </div>
+
+      <div class="tags-row">
+        <span class="tag python">Python</span>
+        <span class="tag django">Django (DRF)</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">.NET Core</span>
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Kafka</span>
+        <span class="tag">gRPC</span>
+        <span class="tag aws">AWS</span>
+        <span class="tag">GCP</span>
+        <span class="tag">Kubernetes</span>
+        <span class="tag">Terraform</span>
+      </div>
+
+      <div class="card-body">
+        <div class="card-section">
+          <div class="card-section-title">Key Experience</div>
+          <div class="experience-item"><div class="exp-role">Sr. Software Engineer</div><div class="exp-company">Softtek</div><div class="exp-dates">Aug 2025 - Mar 2026</div></div>
+          <div class="experience-item"><div class="exp-role">Full Stack Developer</div><div class="exp-company">Wizeline</div><div class="exp-dates">Jan 2023 - May 2025</div></div>
+          <div class="experience-item"><div class="exp-role">Web Developer</div><div class="exp-company">Runa</div><div class="exp-dates">Jan 2020 - Nov 2022</div></div>
+        </div>
+        <div class="card-section">
+          <div class="card-section-title">Why Jes&uacute;s A</div>
+          <ul class="strength-list">
+            <li>Bilingual (English and Spanish) with deep experience at top-tier Mexican tech companies: Softtek, Wizeline, and Runa</li>
+            <li>Production Django (DRF) and FastAPI experience building high-concurrency APIs consumed by React frontends and mobile apps</li>
+            <li>Built a real-time stream processing service at Wizeline that increased accepted rides by 5%, directly relevant to Wingz's NEMT ride model</li>
+            <li>Advanced infrastructure skills: Kubernetes, Terraform, event-driven architectures (Kafka, RabbitMQ), and full observability stack (Prometheus, Grafana, ELK)</li>
+            <li>AI systems builder: deployed production RAG pipelines, agentic workflows, and human-in-the-loop AI at Softtek using OpenAI and Claude</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <div class="footer-note"><strong>$3,500/mo</strong> &middot; Full-time &middot; EST hours</div>
+        <div class="btn-group">
+          <a class="btn btn-outline" href="resume-jesus.html" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Resume
+          </a>
+          <a class="btn btn-primary" href="https://drive.google.com/file/d/17SLgeiEZagINKBQSRiid00C3SaXL96GG/view" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Intro Video
+          </a>
+        </div>
+      </div>
+
+      <div class="card-recruiter-note">
+        <div class="recruiter-note-title">Recruiter's Note</div>
+        <p>Jes&uacute;s A brings the most sophisticated backend architecture skills of this batch. His Wizeline work on a real-time ride-matching service (stream processing, dynamic pricing, 5% lift in accepted rides) is the closest domain match to Wingz's NEMT platform. He is fully bilingual, has worked at three respected companies (Softtek, Wizeline, Runa), and his infrastructure depth (Kubernetes, Terraform, Kafka, Prometheus/Grafana) means he can own both features and reliability. At $3.5K/mo he is the best value-for-depth option in Batch 2. The one trade-off: his React Native experience is lighter than the others, though his React frontend work is strong.</p>
+      </div>
+    </article>
+
+    <!-- ──── CANDIDATE 4: NICOLAS B ──── -->
+    <article class="card" id="nicolas">
+      <div class="card-header">
+        <div class="rank-badge"><span>4</span></div>
+        <div class="card-name-block">
+          <div class="card-name">Nicolas B</div>
+          <div class="card-meta-row">
+            <div class="card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Colombia
+            </div>
+            <div class="card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <strong>9+ years</strong> experience
+            </div>
+            <div class="card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              B.Sc. CS, University of Tokyo
+            </div>
+          </div>
+        </div>
+        <div class="card-actions"></div>
+      </div>
+
+      <div class="tags-row">
+        <span class="tag django">Django</span>
+        <span class="tag django">DRF</span>
+        <span class="tag python">Python</span>
+        <span class="tag react-native">React Native</span>
+        <span class="tag">Flutter</span>
+        <span class="tag postgres">PostgreSQL</span>
+        <span class="tag aws">AWS</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Terraform</span>
+        <span class="tag">.NET Core</span>
+      </div>
+
+      <div class="card-body">
+        <div class="card-section">
+          <div class="card-section-title">Key Experience</div>
+          <div class="experience-item"><div class="exp-role">Senior Backend Engineer</div><div class="exp-company">Predictably</div><div class="exp-dates">Nov 2018 - Mar 2026</div></div>
+          <div class="experience-item"><div class="exp-role">Full Stack Engineer</div><div class="exp-company">Arazas</div><div class="exp-dates">Jun 2017 - Nov 2018</div></div>
+          <div class="experience-item"><div class="exp-role">Full Stack Developer</div><div class="exp-company">Troi Design</div><div class="exp-dates">Apr 2015 - Jun 2016</div></div>
+        </div>
+        <div class="card-section">
+          <div class="card-section-title">Why Nicolas B</div>
+          <ul class="strength-list">
+            <li>7+ years at Predictably building Django + DRF SaaS platforms serving thousands of users daily, the longest single-company tenure in this batch</li>
+            <li>Deep Django specialization: designed and optimized PostgreSQL schemas, migrations, and queries across every role, with PyTest-driven testing practices</li>
+            <li>Hands-on React Native mobile development for iOS and Android at Predictably, plus Flutter experience for additional mobile depth</li>
+            <li>AWS infrastructure experience (EC2, ECS, Lambda, S3, RDS, API Gateway, CloudWatch) with Docker and Terraform for infrastructure-as-code</li>
+            <li>Reduced API latency by 25% at Arazas through backend optimization, demonstrating measurable performance impact</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <div class="footer-note"><strong>TBD</strong> &middot; Full-time &middot; EST hours</div>
+        <div class="btn-group">
+          <a class="btn btn-outline" href="resume-nicolas.html" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Resume
+          </a>
+          <a class="btn btn-primary" href="https://www.loom.com/share/e20e2212d75043b3baf72af15933dc4e" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Intro Video
+          </a>
+        </div>
+      </div>
+
+      <div class="card-recruiter-note">
+        <div class="recruiter-note-title">Recruiter's Note</div>
+        <p>Nicolas B is the most stable and specialized Django engineer in this batch. Seven years at a single company (Predictably) building Django + DRF SaaS platforms is rare and signals reliability, deep ownership, and institutional knowledge. His PostgreSQL work is consistent across every role. The React Native mobile experience at Predictably, combined with Flutter skills, gives him solid cross-platform coverage. CS degree from the University of Tokyo adds academic rigor. His profile is the safest pick for someone who will integrate quickly and deliver consistently on Django + React Native work. Salary TBD pending discussion.</p>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ═══ BATCH 2 COMPARISON TABLE ═══ -->
+  <div class="comparison-section">
+    <div class="section-label" style="padding-bottom:20px;">
+      <h2>Side-by-Side Comparison</h2>
+      <p>Key criteria at a glance to help you prioritize interviews.</p>
+    </div>
+    <div class="comparison-table-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Criteria</th>
+            <th>Juan C</th>
+            <th>David O</th>
+            <th>Jes&uacute;s A</th>
+            <th>Nicolas B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Location</strong></td>
+            <td>Guatemala</td>
+            <td>Brazil</td>
+            <td>Mexico</td>
+            <td>Colombia</td>
+          </tr>
+          <tr>
+            <td><strong>Experience</strong></td>
+            <td class="highlight-cell">12+ years</td>
+            <td>9+ years</td>
+            <td>6 years</td>
+            <td>9+ years</td>
+          </tr>
+          <tr>
+            <td><strong>Django / DRF</strong></td>
+            <td class="partial">Django via Ministry role; FastAPI focus</td>
+            <td class="check">Strong (3+ years at Zco)</td>
+            <td class="check">DRF + FastAPI at Softtek</td>
+            <td class="check">Deep (7+ years at Predictably)</td>
+          </tr>
+          <tr>
+            <td><strong>React Native</strong></td>
+            <td class="check">Yes (Attom Labs, Devsu)</td>
+            <td class="check">Yes (Zco, iOS + Android)</td>
+            <td class="partial">React frontend; lighter RN</td>
+            <td class="check">Yes (Predictably + Flutter)</td>
+          </tr>
+          <tr>
+            <td><strong>PostgreSQL</strong></td>
+            <td class="check">Production usage across roles</td>
+            <td class="check">Schema design, query optimization</td>
+            <td class="check">MySQL, PostgreSQL, distributed DBs</td>
+            <td class="check">Schema design, migrations, optimization</td>
+          </tr>
+          <tr>
+            <td><strong>AWS</strong></td>
+            <td class="check">AppSync, CloudFront, Lambda, EC2, S3</td>
+            <td class="check">EC2, S3, Lambda, Azure</td>
+            <td class="check">EC2, S3, Lambda, RDS + GCP</td>
+            <td class="check">EC2, ECS, Lambda, S3, RDS, API Gateway</td>
+          </tr>
+          <tr>
+            <td><strong>Leadership</strong></td>
+            <td class="check">4 consecutive Team Lead roles</td>
+            <td>IC contributor</td>
+            <td class="partial">Mentored teams at Softtek</td>
+            <td class="partial">Mentored engineers at Predictably</td>
+          </tr>
+          <tr>
+            <td><strong>AI / ML</strong></td>
+            <td class="check">PyTorch, LangChain, Claude, CUDA</td>
+            <td>None listed</td>
+            <td class="check">OpenAI, Claude, RAG, Bedrock</td>
+            <td>None listed</td>
+          </tr>
+          <tr>
+            <td><strong>English Level</strong></td>
+            <td class="check">C1 Advanced</td>
+            <td>Professional</td>
+            <td class="check">Bilingual</td>
+            <td>Professional</td>
+          </tr>
+          <tr>
+            <td><strong>Education</strong></td>
+            <td>B.Eng, USAC Guatemala</td>
+            <td>B.Sc. Math &amp; CS, UFRGS</td>
+            <td>B.Sc. CS, ITT Mexico</td>
+            <td>B.Sc. CS, University of Tokyo</td>
+          </tr>
+          <tr>
+            <td><strong>Monthly Rate</strong></td>
+            <td>$4,000</td>
+            <td>TBD</td>
+            <td class="highlight-cell">$3,500</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td><strong>Availability</strong></td>
+            <td>Mon-Fri, 8-5 EST</td>
+            <td>Mon-Fri, 8-5 EST</td>
+            <td>Mon-Fri, 8-5 EST</td>
+            <td>Mon-Fri, 8-5 EST</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  </div><!-- /batch2 -->
+
   <!-- ═══ YOUR TALENT ADVISOR ═══ -->
   <div class="advisor-section">
     <div class="section-label" style="padding-bottom:20px;">
@@ -999,5 +1488,14 @@
     <p>Prepared by <a href="https://getsagan.com" target="_blank">Sagan</a> for Wingz &middot; Full Stack Engineer Search &middot; March 2026</p>
   </footer>
 
+  <script>
+    function switchBatch(batchId) {
+      document.querySelectorAll('.batch-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.batch-tab').forEach(el => el.classList.remove('active'));
+      document.getElementById(batchId).classList.add('active');
+      event.currentTarget.classList.add('active');
+      window.scrollTo({ top: document.querySelector('.batch-tabs').offsetTop - 80, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
